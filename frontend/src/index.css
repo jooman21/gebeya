@@ -15,6 +15,10 @@ body {
 main{
   flex: 1;
 }
+.btn-primary{
+  background-color: #7c5e0a;
+  color: #000000;
+}
 .products{
   display:flex;
   flex-wrap: wrap;
@@ -32,3 +36,9 @@ main{
   padding: 1rem;
 }
 
+.rating span{
+  color: #ffc000;
+}
+.img-large{
+  max-width: 100;
+}
