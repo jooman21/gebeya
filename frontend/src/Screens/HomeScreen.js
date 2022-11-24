@@ -1,10 +1,12 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useState} from "react";
 import axios from 'axios'
 import logger from 'use-reducer-logger'
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Product from "../components/Product";
 import { Helmet } from "react-helmet-async";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -50,9 +52,9 @@ const reducer = (state, action) => {
         <div className="products">
 
             {loading ? ( 
-            <div>Loading..</div>
+          <LoadingBox />
              ) : error ? (
-                <div>{error}</div>
+              <MessageBox variant="danger">{error}</MessageBox>
              ) : (
             <Row>
             
