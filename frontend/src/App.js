@@ -15,6 +15,10 @@ import { Store } from './Store';
 import CartScreen from './Screens/CartScreen';
 import SigninScreen from './Screens/SigninScreen';
 import ShippingAddressScreen from './Screens/ShippingAddressScreen';
+import SignupScreen from './Screens/SignupScreen';
+import PaymentMethodScreen from './Screens/PaymentMethodScreen';
+import PlaceOrderScreen from './Screens/PlaceOrderScreen';
+import OrderScreen from './Screens/OrderScreen';
 
 function App() {
 
@@ -25,6 +29,7 @@ function App() {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
   };
   return (
     <BrowserRouter>
@@ -78,6 +83,10 @@ function App() {
         <Route path = "/product/:slug" element={<ProductScreen />} />
         <Route path="/cart" element={<CartScreen />} />
         <Route path="/signin" element={<SigninScreen />} />
+        <Route path="/signup" element={<SignupScreen />} />
+        <Route path="/payment" element={<PaymentMethodScreen />} />
+        <Route path="/placeorder" element={<PlaceOrderScreen />} />
+        <Route path="/order/:id" element={<OrderScreen />} />
         <Route
                 path="/shipping"
                 element={<ShippingAddressScreen />}
