@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/jooman21/gebeya/issues"
   },
-  "homepage": "https://github.com/jooman21/gebeya#readme"
+  "homepage": "https://github.com/jooman21/gebeya#readme",
+  "dependencies": {
+    "firebase": "^9.14.0"
+  }
 }
